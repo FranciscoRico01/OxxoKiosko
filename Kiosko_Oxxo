@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Oxxo Kiosko</title>
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Muli', sans-serif;
+            background-image: url('almacen.jpeg'); /* Ruta de la imagen de fondo */
+            background-size: 100% 100%; /* Extender la imagen de fondo a toda la ventana del navegador */
+            background-repeat: no-repeat; /* Evitar repetición de la imagen */
+            color: white; /* Color del texto */
+            text-align: center; /* Alinear texto al centro */
+            height: 100vh; /* Altura del cuerpo igual a la altura de la ventana del navegador */
+            display: flex; /* Activar el modelo de caja flexbox */
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+            flex-direction: column; /* Dirección de los elementos flexbox */
+        }
+        .image-container {
+            margin-top: -150px; /* Ajuste de la distancia desde la parte superior */
+        }
+        img {
+            width: 300px; /* Ancho de la imagen */
+            height: 200px; /* Alto de la imagen */
+            transition: opacity 0.5s ease; /* Transición suave de opacidad */
+        }
+        img:hover {
+            opacity: 0.8; /* Reducir opacidad al pasar el cursor */
+            transform: scale(1.1); /* Aumentar el tamaño al pasar el cursor */
+        }
+        .button-container {
+            margin-top: 20px; /* Ajuste de la distancia desde la parte superior */
+        }
+        button {
+            padding: 15px 30px; /* Espaciado interno del botón */
+            font-size: 1.5em; /* Tamaño del texto */
+            background-color: #007bff; /* Color de fondo del botón */
+            border: none; /* Sin borde */
+            color: white; /* Color del texto */
+            cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+            transition: all 0.3s ease; /* Transición suave */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombreado del botón */
+        }
+        button:hover {
+            background-color: #0056b3; /* Color de fondo del botón al pasar el cursor */
+        }
+
+        /* Estilos para la segunda sección */
+        #segunda-seccion {
+            background-image: url('almacen.jpeg'); /* Utilizar el mismo fondo que el cuerpo */
+            background-size: cover; /* Cubrir toda la ventana */
+            background-position: center; /* Centrar la imagen */
+            height: 100vh; /* Altura igual a la ventana del navegador */
+            width: 100%; /* Ancho igual a la ventana del navegador */
+            display: none; /* Ocultar por defecto */
+            justify-content: center; /* Centrar horizontalmente */
+            align-items: center; /* Centrar verticalmente */
+            flex-direction: column; /* Dirección de los elementos flexbox */
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px; /* Espacio entre imágenes */
+        }
+
+        .gallery a {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-decoration: none; /* Quitar subrayado de enlaces */
+        }
+
+        .gallery img {
+            margin: 5px; /* Espacio entre las imágenes */
+            width: 200px; /* Ancho de la imagen */
+            height: 180px; /* Alto de la imagen */
+            transition: opacity 0.5s ease; /* Transición suave de opacidad */
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Sombreado de la imagen */
+        }
+
+        .gallery img:hover {
+            opacity: 0.8; /* Reducir opacidad al pasar el cursor */
+            transform: scale(1.1); /* Aumentar el tamaño al pasar el cursor */
+        }
+
+        .gallery figcaption {
+            color: rgb(255, 255, 255);
+            font-size: 14px;
+            margin-top: 5px;
+            opacity: 0; /* Inicialmente oculto */
+            transition: opacity 0.3s ease; /* Transición suave de opacidad */
+            border: 5px solid rgb(238, 255, 3); /* Borde blanco */
+            padding: 5px; /* Espaciado interno */
+            border-radius: 100px; /* Bordes redondeados */
+            background-color: rgba(214, 0, 0, 0.8); /* Fondo semi-transparente */
+        }
+
+        .gallery a:hover figcaption {
+            opacity: 1; /* Mostrar al pasar el cursor por la imagen */
+        }
+
+        #regresar-button {
+            margin-top: 2cm; /* Margen superior de 3 cm */
+        }
+
+        h2 {
+            margin-top: 20px; /* Espacio superior */
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="logo_oxxo_con_hover_effects.png" alt="Imagen con HOVER EFFECTS">
+    </div>
+    <div class="button-container">
+        <button onclick="mostrarSegundaSeccion()">Inicio</button>
+    </div>
+
+    <!-- Segunda sección -->
+    <div id="segunda-seccion">
+        <div class="gallery">
+            <a href="https://forms.office.com/r/BhXD17YUp6.html" target="_blank">
+                <img src="montacargas.png" alt="Imagen 1">
+                <figcaption>Equipos Móviles</figcaption>
+            </a>
+            <a href="http://fcrebsprd.femcom.net:8050/OA_HTML/AppsLocalLogin.jsp" target="_blank">
+                <img src="oracle.png" alt="Imagen 2">
+                <figcaption>Oracle</figcaption>
+            </a>
+            <a href="https://a4kkazw9x.accounts.ondemand.com/oauth2/authorize?client_id=7f2a8323-dbef-495b-8470-174074028c70&response_type=code&redirect_uri=https%3A%2F%2Foxxo-prd-conecta-qpb5uk94.authentication.us10.hana.ondemand.com%2Flogin%2Fcallback%2Fsap.custom&state=YYyqWd6xSe&scope=email+openid+profile&nonce=DcwD7IZSP17O.html" target="_blank">
+                <img src="logo_oxxo_mov.gif" alt="Imagen 3">
+                <figcaption>RR.HH.</figcaption>
+            </a>
+            <a href="https://fcportal.femcom.net:8443/AccessControl/pages/login_form.jsf" target="_blank">
+                <img src="Portal_de_Aplicaciones.jpg" alt="Imagen 4">
+                <figcaption>Portal de Aplicaciones</figcaption>
+            </a>
+        </div>
+        <button id="regresar-button" onclick="regresar()"> Regresar </button>
+    </div>
+
+    <script>
+        function mostrarSegundaSeccion() {
+            document.getElementById("segunda-seccion").style.display = "flex";
+            document.querySelector(".image-container").style.display = "none";
+            document.querySelector(".button-container").style.display = "none";
+            fadeImgs();
+        }
+
+        function fadeImgs() {
+            const images = document.querySelectorAll(".gallery img");
+            images.forEach(img => {
+                img.style.opacity = 0;
+                img.style.transition = "opacity 0.5s ease";
+                setTimeout(() => {
+                    img.style.opacity = 1;
+                }, 100);
+            });
+        }
+
+        function regresar() {
+            document.getElementById("segunda-seccion").style.display = "none";
+            document.querySelector(".image-container").style.display = "flex";
+            document.querySelector(".button-container").style.display = "block";
+        }
+    </script>
+</body>
+</html>
